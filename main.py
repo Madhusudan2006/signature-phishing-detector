@@ -34,16 +34,6 @@ async def serve_index():
 # Mount any static assets the frontend might reference
 app.mount("/static", StaticFiles(directory=FRONTEND_DIR), name="static")
 
-
-# if __name__ == "__main__":
-#     import uvicorn
-#     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
-
-
-# if __name__ == "__main__":
-#     import uvicorn
-#     uvicorn.run(app, host="127.0.0.1", port=8000, reload=True)
-
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="127.0.0.1", port=8000)
